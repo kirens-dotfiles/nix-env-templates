@@ -19,7 +19,7 @@ case "$1" in
     exit 0
     ;;
   --list)
-    if test -z "$2"
+    if @test@ -z "$2"
     then
       @ls@ "@SHELLS@"
     else
