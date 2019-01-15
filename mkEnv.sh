@@ -53,3 +53,4 @@ fi
 
 # Then insert the file
 @cp@ "$filename" shell.nix
+@chmod@ 644 shell.nix

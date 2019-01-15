@@ -14,6 +14,7 @@ stdenv.mkDerivation {
     install -v -D -m755 ${./mkEnv.sh} $out/bin/mkEnv
     substituteInPlace $out/bin/mkEnv \
       --subst-var-by bash "${bash}/bin/bash" \
+      --subst-var-by chmod "${coreutils}/bin/chmod" \
       --subst-var-by cp "${coreutils}/bin/cp" \
       --subst-var-by echo "${coreutils}/bin/echo" \
       --subst-var-by grep "${gnugrep}/bin/grep" \
