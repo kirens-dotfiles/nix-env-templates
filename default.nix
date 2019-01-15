@@ -14,11 +14,11 @@ stdenv.mkDerivation {
     install -v -D -m755 ${./mkEnv.sh} $out/bin/mkEnv
     substituteInPlace $out/bin/mkEnv \
       --subst-var-by bash "${bash}/bin/bash" \
-      --subst-var-by test "${coreutils}/bin/test" \
-      --subst-var-by echo "${coreutils}/bin/echo" \
-      --subst-var-by ls "${coreutils}/bin/ls" \
       --subst-var-by cp "${coreutils}/bin/cp" \
+      --subst-var-by echo "${coreutils}/bin/echo" \
       --subst-var-by grep "${gnugrep}/bin/grep" \
+      --subst-var-by ls "${coreutils}/bin/ls" \
+      --subst-var-by test "${coreutils}/bin/test" \
       --subst-var-by SHELLS "$out/shells"
   '';
 
