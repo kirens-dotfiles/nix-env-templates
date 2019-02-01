@@ -13,7 +13,7 @@ in stdenv.mkDerivation {
   name = "ghc-dev-env";
 
   buildInputs = with pkgs; with haskellPackages; [
-    my-ghc
+    ghcWithPkgs
     cabal-install
     # Add any needed binaries here
   ];
